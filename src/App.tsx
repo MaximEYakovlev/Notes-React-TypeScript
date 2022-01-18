@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import Header from "./components/Header";
+import NotesList from "./components/NotesList";
 import { Note } from "./models/note.model";
 import "./App.css";
+import { Col, Container, Row } from "react-bootstrap";
 
 function App() {
   const [notes, setNotes] = useState<Note[]>([
@@ -18,6 +20,13 @@ function App() {
   return (
     <>
       <Header />
+      <Container className="mt-5">
+        <Row>
+          <Col>
+            <NotesList notes={notes} />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
