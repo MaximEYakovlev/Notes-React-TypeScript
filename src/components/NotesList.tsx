@@ -23,7 +23,7 @@ const NotesList: React.FunctionComponent<INotesListProps> = ({
 
   return (
     <>
-      <h2 className="mt-3">Notes</h2>
+      {notes.length > 0 ? <h2 className="mt-3">Notes</h2> : null}
       <div>{renderNotes()}</div>
     </>
   );

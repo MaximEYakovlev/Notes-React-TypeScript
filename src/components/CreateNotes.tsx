@@ -39,7 +39,7 @@ const CreateNotes: React.FunctionComponent<ICreateNotesProps> = ({
 
   return (
     <>
-      <h2>Create Notes</h2>
+      <h2 className="mt-3">Create Notes</h2>
       {error && <Alert variant="danger">{error}</Alert>}
       <Form className="mt-3 mb-3" onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="formBasicTitle">
